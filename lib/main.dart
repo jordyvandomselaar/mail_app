@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-import 'package:mail_app/entities/User.dart';
 import 'package:mail_app/redux/reducers/app_reducer.dart';
 import 'package:mail_app/widgets/containers/connected_auth_gatekeeper.dart';
 import 'package:mail_app/widgets/home_view.dart';
 import 'package:redux/redux.dart';
 
 void main() {
-  final store =
-      Store<AppState>(appReducer, initialState: AppState(user: User()));
+  final store = Store<AppState>(appReducer, initialState: AppState());
 
   runApp(MyApp(store));
 }

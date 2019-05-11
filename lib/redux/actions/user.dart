@@ -1,7 +1,7 @@
-import 'package:mail_app/entities/User.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 class SetUserAction {
-  final User user;
+  final GoogleSignInAccount user;
 
   SetUserAction(this.user);
 }

@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:google_sign_in/google_sign_in.dart';
 
 class GoogleSignInWidget extends StatelessWidget {
-  final GoogleSignIn _googleSignIn;
+  final void Function() onPressed;
 
-  GoogleSignInWidget(this._googleSignIn);
+  GoogleSignInWidget({@required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return RaisedButton(child: Text("Login with Google"), onPressed: onPressed);
   }
 }

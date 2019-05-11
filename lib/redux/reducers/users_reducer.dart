@@ -1,7 +1,7 @@
-import 'package:mail_app/entities/User.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:mail_app/redux/actions/user.dart';
 
-User usersReducer(User user, dynamic action) {
+GoogleSignInAccount usersReducer(GoogleSignInAccount user, dynamic action) {
   if (action is SetUserAction) {
     return action.user;
   }

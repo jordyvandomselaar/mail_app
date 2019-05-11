@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:mail_app/entities/User.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 class AuthGatekeeper extends StatelessWidget {
-  final User user;
+  final GoogleSignInAccount user;
   final Widget child;
   final Widget authWidget;
 

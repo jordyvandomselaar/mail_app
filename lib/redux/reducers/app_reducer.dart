@@ -1,8 +1,8 @@
-import 'package:mail_app/entities/User.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:mail_app/redux/reducers/users_reducer.dart';
 
 class AppState {
-  final User user;
+  final GoogleSignInAccount user;
 
   AppState({this.user});
 }
