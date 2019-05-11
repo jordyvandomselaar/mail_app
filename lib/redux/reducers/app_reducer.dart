@@ -1,11 +1,13 @@
-import 'package:google_sign_in/google_sign_in.dart';
-import 'package:mail_app/redux/reducers/users_reducer.dart';
+import 'package:mail_app/entities/account.dart';
+import 'package:meta/meta.dart';
+import 'accounts_reducer.dart';
 
 class AppState {
-  final GoogleSignInAccount user;
+  final List<Account> accounts;
 
-  AppState({this.user});
+  AppState({@required this.accounts});
 }
 
-AppState appReducer(AppState state, dynamic action) =>
-    AppState(user: usersReducer(state.user, action));
+AppState appReducer(AppState state, dynamic action) {
+  return AppState(accounts: accountsReducer(state.accounts, action));
+}

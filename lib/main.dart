@@ -6,7 +6,8 @@ import 'package:mail_app/widgets/home_view.dart';
 import 'package:redux/redux.dart';
 
 void main() {
-  final store = Store<AppState>(appReducer, initialState: AppState());
+  final store =
+      Store<AppState>(appReducer, initialState: AppState(accounts: []));
 
   runApp(MyApp(store));
 }
