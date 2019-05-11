@@ -4,7 +4,14 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text("Hallo"),
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text("Inbox"),
+        ),
+        body: Column(
+          children: <Widget>[Text("Welcome back!")],
+        ),
+      ),
     );
   }
 }
